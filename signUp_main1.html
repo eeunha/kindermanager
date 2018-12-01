@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<title>회원가입</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<style>
+			body {
+				background-color: #FFFFC6;
+			}
+			#header {
+				background-color: #fff700;
+			}
+			#mainText {
+				font-weight: bold;
+				text-align: center;
+				line-height: 2.64;
+			}
+			#buttonBack {
+				background-color: #fff700;
+			}
+			#button0 {
+				background-color: #FFFFFF;
+				border-color: #FFF700;
+				border-width: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--회원가입 첫 번째 페이지-->
+		<div data-role="page" id="signUpPage0" data-position="fixed">
+			<div data-role="header" id="header">
+				<a href="#" data-icon="back" data-rel="back" data-direction="reverse" id="buttonBack">이전</a>
+				<h1>회원가입</h1>
+			</div>
+			<div data-role="content">
+				<p id="mainText">
+					자신의 역할을 골라주세요.
+					<br>
+					선택한 역할에 맞는 계정이 생성됩니다.
+				</p>
+				<br>
+				<a href="signUp_parent.html" data-role="button" id="button0">학부모</a>
+				<a href="signUp_teacher.html" data-role="button" id="button0">교사</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<title>등하원 관리</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<!-- 교사 등하원 관리 페이지 -->
+		<div data-role="page" id="inOutPage" data-position="fixed">
+			<div data-role="header" id="header">
+				<a href="#" data-icon="back" data-rel="back" data-direction="reverse" id="buttonTop">이전</a>
+				<h1>교사 등하원 관리</h1>
+			</div>
+			<div data-role="content">
+				<p id="mainText">
+					원아의 등하원 정보를 입력하세요.
+					<br>
+				</p>
+				<div data-role="fieldcontain">
+					<label for="kid1">철수</label>
+					<input type="checkbox" checked name="kid1" id="kid1">
+				</div>
+				<div data-role="fieldcontain">
+					<label for="kid2">맹구</label>
+					<input type="checkbox" checked name="kid2" id="kid2">
+				</div>
+				<div data-role="fieldcontain">
+					<label for="kid3">훈이</label>
+					<input type="checkbox" checked name="kid3" id="kid3">
+				</div>
+				<div data-role="fieldcontain">
+					<label for="kid4">유리</label>
+					<input type="checkbox" checked name="kid4" id="kid4">
+				</div>
+				<div data-role="fieldcontain">
+					<label for="kid5">짱구</label>
+					<input type="checkbox" checked name="kid5" id="kid5">
+				</div>
+				<br>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<button id="button0">
+							등원
+						</button>
+					</div>
+					<div class="ui-block-b">
+						<button id="button0">
+							하원
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

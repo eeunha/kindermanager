@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<title>시간표</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<!-- 교사 시간표 페이지 -->
+		<div data-role="page" id="alldayPage" data-position="fixed">
+			<div data-role="header" id="header">
+				<a href="Tmenu.html" data-icon="back" data-rel="back" data-direction="reverse" id="buttonTop">이전</a>
+				<h1>교사 시간표 관리</h1>
+				<a href="Ttime_make.html" data-icon="edit" data-role="button" id="buttonTop">생성</a>
+			</div>
+			<div data-role="content">
+				<div data-role="collapsible-set">
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>2018년 12월</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#">3주차</a>
+							</li>
+							<li>
+								<a href="timeTable.html">2주차</a>
+							</li>
+						</ul>
+					</div>
+					<div data-role="collapsible">
+						<h3>2018년 11월</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#">5주차</a>
+							</li>
+							<li>
+								<a href="#">4주차</a>
+							</li>
+							<li>
+								<a href="#">3주차</a>
+							</li>
+							<li>
+								<a href="#">2주차</a>
+							</li>
+							<li>
+								<a href="#">1주차</a>
+							</li>
+						</ul>
+					</div>
+					<div data-role="collapsible">
+						<h3>2018년 10월</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#">5주차</a>
+							</li>
+							<li>
+								<a href="#">4주차</a>
+							</li>
+							<li>
+								<a href="#">3주차</a>
+							</li>
+							<li>
+								<a href="#">2주차</a>
+							</li>
+							<li>
+								<a href="#">1주차</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

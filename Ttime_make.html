@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<title>시간표</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<!-- 교사 시간표 생성 페이지 -->
+		<div data-role="page" id="noticeMakePage" data-position="fixed">
+			<div data-role="header" id="header">
+				<a href="Ttime.html" data-icon="back" data-rel="back" data-direction="reverse" id="buttonTop">이전</a>
+				<h1>교사 시간표 게시글 생성</h1>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain">
+					<label>반 선택 </label>
+					<select data-role="none">
+						<option value="noticeGrass">풀잎반</option>
+						<option value="noticeFlower">꽃잎반</option>
+						<option value="noticeSun">햇살반</option>
+						<option value="noticeAll">전체</option>
+					</select>
+					<br/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="timeTitle">제목 </label>
+					<input type="text" name="timeTitle" id="timeTitle">
+				</div>
+				<div data-role="fieldcontain">
+					<label for="timeMon">월요일</label>
+					<textarea cols="25" rows="5" id="timeMon"></textarea>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="timeTue">화요일</label>
+					<textarea cols="25" rows="5" id="timeTue"></textarea>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="timeWed">수요일</label>
+					<textarea cols="25" rows="5" id="timeWed"></textarea>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="timeThu">목요일</label>
+					<textarea cols="25" rows="5" id="timeThu"></textarea>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="timeFri">금요일</label>
+					<textarea cols="25" rows="5" id="timeFri"></textarea>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="timeMemo">메모</label>
+					<textarea cols="25" rows="6" id="timeMemo"></textarea>
+				</div>
+				<br>
+				<a href="Ttime.html" data-role="button" id="button0">등록</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<title>메뉴</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<!--교사 메뉴 페이지-->
+		<div data-role="page" id="menuPage" data-position="fixed">
+			<div data-role="header" id="header">
+				<a href="#" data-icon="back" data-rel="back" data-direction="reverse" id="buttonTop">이전</a>
+				<h1>메뉴</h1>
+				<a href="main.html" data-icon="power" id="buttonTop">로그아웃</a>
+			</div>
+			<div data-role="content">
+				<p id="mainText">
+					채송화 선생님 환영합니다!
+				</p>
+				<br>
+				
+				<div data-role="content">
+					<table border ="1">
+						<tr>
+							<td><img src="Image/알림장.jpg" width="200" height="200"><a href="Tnotice.html" data-role="button">알림장</a></td>
+							<td><img src="Image/시간표.png" width="200" height="200"><a href="Ttime.html" data-role="button">시간표</a></td>
+							<td><img src="Image/사진첩.png" width="200" height="200"><a href="Tphoto.html" data-role="button">사진첩</a></td>
+						</tr>
+
+						<tr>
+							<td><img src="Image/종일반 신청.jpg" width="200" height="200"><a href="Tallday_t.html" data-role="button">종일반 신청</a></td>
+							<td><img src="Image/출석부.png" width="200" height="200"><a href="Tin_out.html" data-role="button">등하원 관리</a></td>
+							<td><img src="Image/위치.jpg" width="200" height="200"><a href="Tlocation.html" data-role="button">아동의 위치</a></td>
+						</tr>
+
+					</table>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

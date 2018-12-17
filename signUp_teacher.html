@@ -8,12 +8,15 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<link rel="stylesheet" href="style.css"/>
+		<!-- fotorama CDN 설정 추가 -->
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script>
 	</head>
 	<body>
 		<!-- 교사 회원가입 페이지 -->
 		<div data-role="page" id="signUpTeacher" data-position="fixed">
 			<div data-role="header" id="header">
-				<a href="#" data-icon="back" data-rel="back" data-direction="reverse" id="buttonBack">이전</a>
+				<a href="main.html" data-icon="back" data-rel="back" data-direction="reverse" id="buttonBack">이전</a>
 				<h1>교사 회원가입</h1>
 			</div>
 			<div data-role="content">
@@ -47,10 +50,14 @@
 				</div>
 				<div data-role="fieldcontain">
 					<label for="teacherClass">담당 반 이름</label>
-					<input type="text" name="teacherClass" id="teacherClass" placeholder="자신의 담당 반 이름을 입력하세요">
+					<select size="1" name="class">
+						<option value="풀잎">풀잎반</option>
+						<option value="꽃잎">꽃잎반</option>
+						<option value="햇살">햇살반</option>
+					</select>
 				</div>
 				<br>
-				<a href="welcome.html" data-role="button" id="button0">가입하기</a>
+				<a href="Twelcome.html" data-role="button" id="button0">가입하기</a>
 			</div>
 		</div>
 	</body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<title>알림장</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<!-- 교사 알림장 페이지 -->
+		<div data-role="page" id="noticeMakePage" data-position="fixed">
+			<div data-role="header" id="header">
+				<a href="Tnotice.html" data-icon="back" data-rel="back" data-direction="reverse" id="buttonTop">이전</a>
+				<h1>교사 알림장 관리</h1>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain">
+					<label for="noticeClass">반 선택 </label>
+					<select data-role="none">
+						<option value="noticeGrass">풀잎반</option>
+						<option value="noticeFlower">꽃잎반</option>
+						<option value="noticeSun">햇살반</option>
+						<option value="noticeAll">전체</option>
+					</select>
+					<br/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="noticeTitle">제목 </label>
+					<input type="text" name="noticeTitle" id="noticeTitle">
+				</div>
+				<div data-role="fieldcontain">
+					<label for="noticeContent">내용</label>
+					<textarea cols="25" rows="5" id="noticeContent"></textarea>
+				</div>
+				<br>
+				<a href="Tnotice.html" data-role="button" id="button0">등록</a>
+			</div>
+		</div>
+	</body>
+</html>

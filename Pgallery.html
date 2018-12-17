@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>사진첩</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <!-- fotorama CDN 설정 추가 -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script>
+
+</head>
+
+<body>   
+   <!-- 메인 페이지-->
+    <div data-role="page" id="gallery" >
+       <div data-role="header" id="header"> 
+       <a href="Pmenu.html" data-icon="back" data-rel="back" data-direction="reverse" id="buttonBack">이전</a>  
+         <h1>사진첩</h1>
+        </div>         
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true"> 
+                <li><a href="#kids" >
+                            <h3>2018년 풀잎반 아이들 사진</h3>
+                      </a>
+                </li> 
+                <li ><a href="#make" >
+                            <h3>2018년 추석맞이 송편 만들기</h3>
+                        </a>
+                </li> 
+                <li><a href="#water">
+                            <h3>2018년 신나는 물놀이</h3>
+                      </a>
+                </li> 
+                <li><a href="#fieldtrip" >
+                            <h3>2018년 봄소풍</h3>
+                      </a>
+                </li> 
+            </ul>         
+        </div> <!-- content 끝-->      
+    </div><!-- page 끝-->
+
+     <div data-role="page"  id="kids">
+          <div data-role="header" id="header">
+       <a href="Pgallery.html" data-icon="back" data-rel="back" data-direction="reverse" id="buttonBack">이전</a>
+            <h1>2018년 풀잎반 아이들 사진</h1>
+          </div><!-- header 끝 -->
+          
+          <div data-role="content" >
+                <div class="fotorama" data-arrows="true" data-width="100%" data-ratio="965/643" data-allowfullscreen="true" data-nav="thumbs" >
+                        <a href="찬미.jpg"><img src="Image/찬미.jpg" data-caption="유찬미" /></a>
+                        <a href="혜은이.jpg"><img src="Image/혜은이.jpg" data-caption="이혜은" /></a>
+                        <a href="은하.jpg"><img src="Image/은하.jpg" data-caption="황은하" /></a>              
+                </div>    
+           </div>  
+    </div><!-- page 끝-->
+    
+     

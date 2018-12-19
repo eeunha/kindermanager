@@ -22,49 +22,49 @@
 			</div>
 			<div data-role="content">
 				<form id="signparent">
-				<p id="mainText">
-					자신의 정보를 입력해주세요.
+					<p id="mainText">
+						자신의 정보를 입력해주세요.
+						<br>
+					</p>
+					<div data-role="fieldcontain">
+						<label for="parentId">아이디</label>
+						<input type="text" name="parentId" id="parentId" placeholder="아이디를 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="parentPwd">비밀번호</label>
+						<input type="password" name="parentPwd" id="parentPwd" placeholder="패스워드를 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="parentPwdCheck">비밀번호 확인</label>
+						<input type="password" name="parentPwdCheck" id="parentPwdCheck" placeholder="패스워드를 다시 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="parentName">이름</label>
+						<input type="text" name="parentName" id="parentName" placeholder="이름을 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="parentEmail">이메일</label>
+						<input type="email" name="parentEmail" id="parentEmail" placeholder="이메일을 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="parentPhone">전화번호</label>
+						<input type="number" name="parentPhone" id="parentPhone" placeholder="전화번호를 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="childClass">아이 반 이름</label>
+						<select size="1" name="class">
+							<option value="풀잎">풀잎반</option>
+							<option value="꽃잎">꽃잎반</option>
+							<option value="햇살">햇살반</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="childName">아이 이름</label>
+						<input type="text" name="childName" id="childName" placeholder="아이의 이름을 입력하세요">
+					</div>
+
 					<br>
-				</p>
-				<div data-role="fieldcontain">
-					<label for="parentId">아이디</label>
-					<input type="text" name="parentId" id="parentId" placeholder="아이디를 입력하세요">
-				</div>
-				<div data-role="fieldcontain">
-					<label for="parentPwd">비밀번호</label>
-					<input type="password" name="parentPwd" id="parentPwd" placeholder="패스워드를 입력하세요">
-				</div>
-				<div data-role="fieldcontain">
-					<label for="parentPwdCheck">비밀번호 확인</label>
-					<input type="password" name="parentPwdCheck" id="parentPwdCheck" placeholder="패스워드를 다시 입력하세요">
-				</div>
-				<div data-role="fieldcontain">
-					<label for="parentName">이름</label>
-					<input type="text" name="parentName" id="parentName" placeholder="이름을 입력하세요">
-				</div>
-				<div data-role="fieldcontain">
-					<label for="parentEmail">이메일</label>
-					<input type="email" name="parentEmail" id="parentEmail" placeholder="이메일을 입력하세요">
-				</div>
-				<div data-role="fieldcontain">
-					<label for="parentPhone">전화번호</label>
-					<input type="number" name="parentPhone" id="parentPhone" placeholder="전화번호를 입력하세요">
-				</div>
-				<div data-role="fieldcontain">
-					<label for="childClass">아이 반 이름</label>
-					<select size="1" name="class">
-						<option value="풀잎">풀잎반</option>
-						<option value="꽃잎">꽃잎반</option>
-						<option value="햇살">햇살반</option>
-					</select>
-				</div>
-				<div data-role="fieldcontain">
-					<label for="childName">아이 이름</label>
-					<input type="text" name="childName" id="childName" placeholder="아이의 이름을 입력하세요">
-				</div>
-				
-				<br>
-				<a href="Pwelcome.html" data-role="button" id="button0">가입하기</a>
+					<input type="button" id="btnJoin_parent" value="가입하기"/>
 				</form>
 			</div>
 		</div>

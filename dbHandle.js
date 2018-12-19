@@ -12,8 +12,8 @@ function createTable() {
 		var createSQL_ban = 'create table if not exists bans(ban_id integer primary key autoincrement, b_name varchar(20) not null unique, b_teacher varchar(20), FOREIGN KEY(b_teacher) REFERENCES teachers(t_id) ON DELETE CASCADE)';
 		var createSQL_kid = 'create table if not exists kids(kid_id integer primary key autoincrement, k_ban varchar(20) not null, k_name varchar(20) not null, k_parent varchar(50), FOREIGN KEY(k_ban) REFERENCES bans(b_name) ON DELETE CASCADE, FOREIGN KEY(k_parent) REFERENCES parents(p_id) ON DELETE CASCADE)';
 		var createSQL_inout = 'create table if not exists inouts(inout_id integer primary key autoincrement, i_ban varchar(20) not null, i_name varchar(20) not null, i_inout varchar(50), i_time text, FOREIGN KEY(i_ban) REFERENCES bans(b_name) ON DELETE CASCADE)';
-		var createSQL_allday = 'create table if not exists alldays(allday_id integer primary key autoincrement, a_ban varchar(20) not null, a_teacher varchar(50), a_title varchar(255), a_content text)';
-		var createSQL_location = 'create table if not exists locations(location_id integer primary key autoincrement, l_ban varchar(20) not null unique, l_teacher varchar(20) not null, l_latitude real, l_longitude real, i_time text)';
+		var createSQL_allday = 'create table if not exists alldays(allday_id integer primary key autoincrement, a_ban varchar(20) not null, a_teacher varchar(50), a_title varchar(255), a_content text, FOREIGN KEY(a_ban) REFERENCES bans(b_name) ON DELETE CASCADE), FOREIGN KEY(a_teacher) REFERENCES teachers(t_name) ON DELETE CASCADE)';
+		var createSQL_location = 'create table if not exists locations(location_id integer primary key autoincrement, l_ban varchar(20) not null unique, l_teacher varchar(20) not null, l_latitude real, l_longitude real, i_time text, FOREIGN KEY(l_ban) REFERENCES bans(b_name) ON DELETE CASCADE, FOREIGN KEY(l_teacher) REFERENCES teachers(t_name) ON DELETE CASCADE)';
 
 		tr.executeSql(createSQL_teacher, [], function() {
 			console.log('2_1_ teachers 테이블생성_sql 실행 성공...');

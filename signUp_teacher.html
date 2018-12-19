@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<title>회원가입</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="style.css"/>
+		<!-- fotorama CDN 설정 추가 -->
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script>
+	</head>
+	<body>
+		<!-- 교사 회원가입 페이지 -->
+		<div data-role="page" id="signUpTeacher" data-position="fixed">
+			<div data-role="header" id="header">
+				<a href="main.html" data-icon="back" data-rel="back" data-direction="reverse" id="buttonBack">이전</a>
+				<h1>교사 회원가입</h1>
+			</div>
+			<div data-role="content">
+				<form id="signteacher">
+					<p id="mainText">
+						자신의 정보를 입력해주세요.
+						<br>
+					</p>
+					<div data-role="fieldcontain">
+						<label for="teacherId">아이디</label>
+						<input type="text" name="teacherId" id="teacherId" placeholder="아이디를 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="teacherPwd">비밀번호</label>
+						<input type="password" name="teacherPwd" id="teacherPwd" placeholder="패스워드를 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="teacherPwdCheck">비밀번호 확인</label>
+						<input type="password" name="teacherPwdCheck" id="teacherPwdCheck" placeholder="패스워드를 다시 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="teacherName">이름</label>
+						<input type="text" name="teacherName" id="teacherName" placeholder="이름을 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="teacherEmail">이메일</label>
+						<input type="email" name="teacherEmail" id="teacherEmail" placeholder="이메일을 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="teacherPhone">전화번호</label>
+						<input type="number" name="teacherPhone" id="teacherPhone" placeholder="전화번호를 입력하세요">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="teacherClass">담당 반 이름</label>
+						<select size="1" name="class">
+							<option value="풀잎">풀잎반</option>
+							<option value="꽃잎">꽃잎반</option>
+							<option value="햇살">햇살반</option>
+						</select>
+					</div>
+					<br>
+					<a href="Twelcome.html" data-role="button" id="button0">가입하기</a>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

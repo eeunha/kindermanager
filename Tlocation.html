@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<title>현재 위치</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<!-- 교사 위치 페이지 -->
+		<div data-role="page" id="locationPage" data-position="fixed">
+			<div data-role="header" id="header">
+				<a href="Tmenu.html" data-icon="back" data-rel="back" data-direction="reverse" id="buttonTop">이전</a>
+				<h1>교사 위치 접근 관리</h1>
+			</div>
+			<div data-role="content">
+				<form id="tlocation">
+				<p id="mainText">
+					현재 위치 정보를 조회하는 것을 허가합니까?
+				</p>
+				<br>
+				<!-- <p id="mainCenter">
+					<select name="locationAdmit" id="locationAdmit" data-role="slider">
+						<option value="off">아니오</option>
+						<option value="on">네</option>
+					</select>
+				</p>
+				<br>
+				<a href="location.html" data-role="button" id="button0">등록</a> -->
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<button id="button0">
+							예
+						</button>
+					</div>
+					<div class="ui-block-b">
+						<button id="button0">
+							아니오
+						</button>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

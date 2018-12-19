@@ -17,44 +17,45 @@
 				<h1>교사 등하원 관리</h1>
 			</div>
 			<div data-role="content">
-				<p id="mainText">
-					원아의 등하원 정보를 입력하세요.
+				<form id="tinout">
+					<p id="mainText">
+						원아의 등하원 정보를 입력하세요.
+						<br>
+					</p>
+					<div data-role="fieldcontain">
+						<label for="kid1">철수</label>
+						<input type="checkbox" checked name="kid1" id="kid1">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="kid2">맹구</label>
+						<input type="checkbox" checked name="kid2" id="kid2">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="kid3">훈이</label>
+						<input type="checkbox" checked name="kid3" id="kid3">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="kid4">유리</label>
+						<input type="checkbox" checked name="kid4" id="kid4">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="kid5">짱구</label>
+						<input type="checkbox" checked name="kid5" id="kid5">
+					</div>
 					<br>
-				</p>
-				<div data-role="fieldcontain">
-					<label for="kid1">철수</label>
-					<input type="checkbox" checked name="kid1" id="kid1">
-				</div>
-				<div data-role="fieldcontain">
-					<label for="kid2">맹구</label>
-					<input type="checkbox" checked name="kid2" id="kid2">
-				</div>
-				<div data-role="fieldcontain">
-					<label for="kid3">훈이</label>
-					<input type="checkbox" checked name="kid3" id="kid3">
-				</div>
-				<div data-role="fieldcontain">
-					<label for="kid4">유리</label>
-					<input type="checkbox" checked name="kid4" id="kid4">
-				</div>
-				<div data-role="fieldcontain">
-					<label for="kid5">짱구</label>
-					<input type="checkbox" checked name="kid5" id="kid5">
-				</div>
-				<br>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<button id="button0">
-							등원
-						</button>
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<button id="button0">
+								등원
+							</button>
+						</div>
+						<div class="ui-block-b">
+							<button id="button0">
+								하원
+							</button>
+						</div>
 					</div>
-					<div class="ui-block-b">
-						<button id="button0">
-							하원
-						</button>
-					</div>
-				</div>
-
+				</form>
 			</div>
 		</div>
 	</body>

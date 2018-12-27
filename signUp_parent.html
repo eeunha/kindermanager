@@ -8,10 +8,34 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<link rel="stylesheet" href="style.css"/>
-		<script src="routes/join.js"></script>
+
 		<!-- fotorama CDN 설정 추가 -->
-		<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet">
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script>
+		<!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script> -->
+
+		<!-- 사용자 정의 자바스크립트 파일  -->
+		<script src="dbHandle.js"></script>
+		<script src="myCookies.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				// DB, Table 열기
+				openDB();
+				createTable();
+				// insertBasicTable();
+
+				$('#btnJoin_parent').click(function() {
+					// alert("ok");
+					if ($('#parentId').val() == "" || $('#parentPwd').val() == "" || $('#parentPwdCheck').val() == "") {
+						alert('아이디 혹은 비밀번호를 입력하세요.');
+					} else if ($('#parentPwd').val() != $('#parentPwdCheck').val()) {
+						alert('비밀번호가 같지 않습니다.');
+					} else {
+						insertParent();
+					}
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<!-- 학부모 회원가입 페이지 -->
@@ -39,10 +63,6 @@
 						<input type="password" name="parentPwdCheck" id="parentPwdCheck" placeholder="패스워드를 다시 입력하세요">
 					</div>
 					<div data-role="fieldcontain">
-						<label for="parentName">이름</label>
-						<input type="text" name="parentName" id="parentName" placeholder="이름을 입력하세요">
-					</div>
-					<div data-role="fieldcontain">
 						<label for="parentEmail">이메일</label>
 						<input type="email" name="parentEmail" id="parentEmail" placeholder="이메일을 입력하세요">
 					</div>
@@ -52,10 +72,10 @@
 					</div>
 					<div data-role="fieldcontain">
 						<label for="childClass">아이 반 이름</label>
-						<select size="1" name="class">
-							<option value="풀잎">풀잎반</option>
-							<option value="꽃잎">꽃잎반</option>
-							<option value="햇살">햇살반</option>
+						<select size="1" id = "childClass" name="childClass">
+							<option value="풀잎반">풀잎반</option>
+							<option value="꽃잎반">꽃잎반</option>
+							<option value="햇살반">햇살반</option>
 						</select>
 					</div>
 					<div data-role="fieldcontain">
@@ -64,7 +84,7 @@
 					</div>
 
 					<br>
-					<input type="button" id="btnJoin_parent" value="가입하기"/>
+					<input type="button" id="btnJoin_parent" value="가입하기" class="btncss"/>
 				</form>
 			</div>
 		</div>

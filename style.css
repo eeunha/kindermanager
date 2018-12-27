@@ -1,0 +1,94 @@
+/*모든 페이지 body*/
+body {
+	background-color: #FFFFC6;
+}
+#header {
+	background-color: #fff700;
+}
+/* signup_M 스타일 시트*/
+#mainText {
+	font-weight: bold;
+	text-align: center;
+	line-height: 2.64;
+}
+
+#location_data {
+	font-weight: bold;
+	text-align: center;
+	line-height: 2.64;
+}
+
+/* login.html, signup_M, P, T, welcom.html 스타일시트*/
+#buttonBack {
+	background-color: #fff700;
+}
+.btncss {
+	background-color: #FFFFFF;
+	border-color: #FFF700;
+	border-width: 2px;
+}
+#button0 {
+	background-color: #FFFFFF;
+	border-color: #FFF700;
+	border-width: 2px;
+}
+#btnJoin_parent {
+	background-color: #FFFFFF;
+	border-color: #FFF700;
+	border-width: 2px;
+}
+#btnJoin_teacher {
+	background-color: #FFFFFF;
+	border-color: #FFF700;
+	border-width: 2px;
+}
+/* welcome.html 환영 화면 스타일시트*/
+#welcomeImage {
+	width: 204px;
+	height: 204px;
+}
+
+/*main.html 첫 화면 스타일시트*/
+#mainPic {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#mainCenter {
+	text-align: center;
+}
+#btn {
+	background-color: #fff700
+}
+
+/*mainpage 스타일 시트*/
+table {
+	width: 400px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*등하원 관리 스타일 시트*/
+.red {
+	color: red;
+}
+.blue {
+	color: blue;
+}
+div {
+	word-spacing: 10px;
+}
+
+/*지도 스타일*/
+.map_style {
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+/*교사뷰에서 버튼*/
+#buttonTop {
+	background-color: #fff700;
+}
+

@@ -8,6 +8,47 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<link rel="stylesheet" href="style.css"/>
+
+		<!-- 사용자 정의 자바스크립트 파일  -->
+		<script src="dbHandle.js"></script>
+		<script src="myCookies.js"></script>
+		<script src="myLocation.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				// DB, Table 열기
+				openDB();
+				createTable();
+
+				// 이벤트 함수 정의
+				$('#location_y').click(function() {
+					// getMyLocation();
+					alert('위치추적이 시작되었습니다');
+					startLocation();
+					document.getElementById('location_data').innerHTML = '<p style="color:red" id="location_data"> 위치추적이 시작되었습니다. </p>';
+				});
+
+				// 이벤트 함수 정의
+				$('#location_n').click(function() {
+					stopLocation();
+					alert("취소되었습니다.");
+					document.getElementById('location_data').innerHTML = '<p id="location_data"> 위치추적이 정지되었습니다. </p>';
+					location.href = "Tmenu.html";
+				});
+			});
+			function startLocation() {
+				playAlert = setInterval(function() {
+					// alert('http://webisfree.com');
+					getMyLocation();
+				}, 10000);
+				// 5초마다
+			};
+
+			function stopLocation() {
+				clearInterval(playAlert);
+			};
+		</script>
+
 	</head>
 	<body>
 		<!-- 교사 위치 페이지 -->
@@ -18,30 +59,23 @@
 			</div>
 			<div data-role="content">
 				<form id="tlocation">
-				<p id="mainText">
-					현재 위치 정보를 조회하는 것을 허가합니까?
-				</p>
-				<br>
-				<!-- <p id="mainCenter">
-					<select name="locationAdmit" id="locationAdmit" data-role="slider">
-						<option value="off">아니오</option>
-						<option value="on">네</option>
-					</select>
-				</p>
-				<br>
-				<a href="location.html" data-role="button" id="button0">등록</a> -->
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<button id="button0">
-							예
-						</button>
+					<p id="mainText">
+						현재 위치 정보를 조회하는 것을 허가합니까?
+					</p>
+					<br>
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<input type="button" id="location_y" value="예"/>
+						</div>
+						<div class="ui-block-b">
+							<input type="button" id="location_n" value="아니오"/>
+						</div>
 					</div>
-					<div class="ui-block-b">
-						<button id="button0">
-							아니오
-						</button>
-					</div>
-				</div>
+					<br>
+					<br>
+					<p id="location_data">
+						
+					</p>
 				</form>
 			</div>
 		</div>

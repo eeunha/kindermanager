@@ -8,6 +8,26 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<link rel="stylesheet" href="style.css"/>
+
+		<!-- 사용자 정의 자바스크립트 파일  -->
+		<script src="dbHandle.js"></script>
+		<script src="myCookies.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				// DB, Table 열기
+				openDB();
+				createTable();
+
+				showUser();
+			});
+
+			function showUser() {
+				var user = getCookie('uid');
+				document.getElementById('mainText').innerHTML = '<p id="mainText">' + getCookie('urole') + ' ' + user + '님 환영합니다!</p>';
+			}
+		</script>
+
 	</head>
 	<body>
 		<!--교사 메뉴 페이지-->
@@ -19,10 +39,10 @@
 			</div>
 			<div data-role="content">
 				<p id="mainText">
-					채송화 선생님 환영합니다!
+					환영합니다!
 				</p>
 				<br>
-				
+
 				<div data-role="content">
 					<table border ="1">
 						<tr>

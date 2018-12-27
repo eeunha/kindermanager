@@ -8,9 +8,41 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<link rel="stylesheet" href="style.css"/>
+
 		<!-- fotorama CDN 설정 추가 -->
-	<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet">
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script>
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script>
+
+		<!-- 사용자 정의 자바스크립트 파일  -->
+		<script src="dbHandle.js"></script>
+		<script src="myCookies.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				// 폰갭 API 초기화
+				initPhoneGap();
+
+				// DB, Table 열기
+				openDB();
+				createTable();
+
+				if (getCookie('databaseOn') != 1) {
+					insertBasicTable();
+					setCookie('databaseOn', 1);
+				}
+
+				deleteCookie('uid');
+				deleteCookie('urole');
+			});
+			function initPhoneGap() {
+				document.addEventListener('deviceready', onDeviceReady, true);
+			}
+
+			function onDeviceReady() {
+				navigator.notification.alert('장치 준비됨', null, '폰갭 API');
+			}
+		</script>
+
 	</head>
 	<body>
 		<div data-role="page" id="page1" data-title="첫 화면">
@@ -19,7 +51,7 @@
 				<h1 id="mainCenter">TMi</h1>
 				<h3 id="mainCenter">Teacher Management i</h3>
 				<br>
-				<a href="Plogin.html" id="btn" data-role="button" data-corners="false">로그인</a>
+				<a href="login.html" id="btn" data-role="button" data-corners="false">로그인</a>
 				<a href="signUp_main.html" id="btn" data-role="button" data-corners="false">회원가입</a>
 			</div>
 		</div>

@@ -8,9 +8,34 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<link rel="stylesheet" href="style.css"/>
+
 		<!-- fotorama CDN 설정 추가 -->
 		<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet">
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script>
+
+		<!-- 사용자 정의 자바스크립트 파일  -->
+		<script src="dbHandle.js"></script>
+		<script src="myCookies.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				// DB, Table 열기
+				openDB();
+				createTable();
+				// insertBasicTable();
+
+				// 이벤트 함수 정의
+				$('#btnJoin_teacher').click(function() {
+					if ($('#teacherId').val() == "" || $('#teacherPwd').val() == "" || $('#teacherPwdCheck').val() == "") {
+						alert('아이디 혹은 비밀번호를 입력하세요.');
+					} else if ($('#teacherPwd').val() != $('#teacherPwdCheck').val()) {
+						alert('비밀번호가 같지 않습니다.');
+					} else {
+						insertTeacher();
+					}
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<!-- 교사 회원가입 페이지 -->
@@ -51,10 +76,10 @@
 					</div>
 					<div data-role="fieldcontain">
 						<label for="teacherClass">담당 반 이름</label>
-						<select size="1" name="class">
-							<option value="풀잎">풀잎반</option>
-							<option value="꽃잎">꽃잎반</option>
-							<option value="햇살">햇살반</option>
+						<select size="1" id="teacherClass" name="teacherClass">
+							<option value="풀잎반">풀잎반</option>
+							<option value="꽃잎반">꽃잎반</option>
+							<option value="햇살반">햇살반</option>
 						</select>
 					</div>
 					<br>
